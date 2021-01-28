@@ -8,7 +8,6 @@ let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem
 localStorage.setItem('items', JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem('items'));
 
-let oldLocalStorage = JSON.parse(localStorage['items']);
 
 data.forEach((item) => {
   addTodoText(item);
@@ -46,18 +45,13 @@ function addTodoText(text){
 }
 
 function removeTodo(){
-            console.log(oldLocalStorage);
-            oldLocalStorage.slice(this,1);
-            console.log(data);
-            // oldLocalStorage = data;
             this.parentElement.classList.remove("card");
             this.parentElement.classList.add("removeTodo");
+            itemsArray.pop();
+            localStorage.setItem('items', JSON.stringify(itemsArray));
 
 }
 
 function checked(){
-           console.log(this);
            this.classList.toggle("checked");
 }
-
-
