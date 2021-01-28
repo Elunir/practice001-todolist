@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+}
+body {
+  margin: 16px;
+}
+.textTodo {
+  margin-bottom: 16px;
+}
+.card p {
+  width: calc(100%-16px);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: #212121;
+  border-radius: 8px;
+}
+.card:nth-child(even) {
+  background: #cccccc;
+  border-radius: 8px;
+}
+.card:nth-child(odd) {
+  background: #eeeeee;
+  border-radius: 8px;
+}
+.card:nth-child(even):hover p {
+  background: #535353;
+  color: white;
+  border-radius: 8px;
+}
+.card:nth-child(odd):hover p {
+  background: #535353;
+  color: white;
+  border-radius: 8px;
+}
+.closebutton {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  display: flex;
+  position: absolute;
+  right: 32px;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  border-radius: 8px;
+}
+.closebutton:hover {
+  background: red;
+  color: white;
+}
+.removeTodo {
+  display: none;
+}
+.checked {
+  text-decoration-line: line-through;
+}
